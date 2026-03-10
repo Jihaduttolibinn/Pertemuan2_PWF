@@ -13,6 +13,9 @@ FOTO UNTUK DI HALAMAN ABOUT
 
 **TUGAS PERTEMUAN 3**
 <img width="1920" height="1080" alt="Screenshot 2026-03-10 214404" src="https://github.com/user-attachments/assets/6eabc655-88e4-41ef-a3fa-7e355ac7cbfb" />
+
+<img width="975" height="642" alt="image" src="https://github.com/user-attachments/assets/7bc2e9dd-8b10-4c24-a63f-1e61ed8052ec" />
+
 Models Kategori
 <img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/b27400d6-995c-42a0-88a9-3d38ec8ccc5a" />
 
