@@ -34,5 +34,6 @@ Migrations
 
 
 **TUGAS PERTEMUAN 4**
+A. Implementasi Logika & Validasi (Controller) Buka app/Http/Controllers/ProductController.php:
 
 
