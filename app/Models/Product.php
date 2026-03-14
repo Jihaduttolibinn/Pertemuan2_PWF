@@ -16,4 +16,9 @@ class Product extends Model
         'qty',
         'price',
     ];
+
+    public function user()
+    {
+        return $this->belongsTo(User::class);
+    }
 }
