@@ -34,6 +34,18 @@ Migrations
 
 
 **TUGAS PERTEMUAN 4**
-A. Implementasi Logika & Validasi (Controller) Buka app/Http/Controllers/ProductController.php:
+1. Implementasi Logika & Validasi (Controller) Buka app/Http/Controllers/ProductController.php:
+<img width="1920" height="1080" alt="Screenshot 2026-03-14 224321" src="https://github.com/user-attachments/assets/db693f3c-f3ba-4b73-9551-32c3e222c19e" />
+2. Routing
+<img width="1920" height="1080" alt="Screenshot 2026-03-14 225728" src="https://github.com/user-attachments/assets/e1609e11-083b-45c2-b8e7-dc6b275e1a60" />
+3. Pembuatan Antarmuka (View / Blade)
+A. Halaman Utama (resources/views/product/index.blade.php)
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/f3387c77-b7ab-4023-9094-d6ab89b2a24a" />
+B. Halaman Tambah Data (resources/views/product/create.blade.php)
+<img width="1920" height="1080" alt="Screenshot 2026-04-09 000505" src="https://github.com/user-attachments/assets/f0a40c3a-03b0-4142-b668-b0d5cb9219cf" />
+C. Halaman Edit Data (resources/views/product/create.blade.php)
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/1a95888d-e2d6-4df5-b8f0-4a80b76bd762" />
+D. Halaman View Data (resources/views/product/view.blade.php)
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/38b5f65e-b970-4451-8760-9f11aea1af81" />
 
 
