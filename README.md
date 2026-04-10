@@ -55,3 +55,15 @@ D. Halaman View Data (resources/views/product/view.blade.php)
 <img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/38b5f65e-b970-4451-8760-9f11aea1af81" />
 
 
+**TUGAS PERTEMUAN 5**
+Pengujian 1 — Persiapan Role untuk mengetahaui role
+Admin
+<img width="1920" height="1080" alt="Screenshot 2026-04-10 100557" src="https://github.com/user-attachments/assets/18b8c0af-635b-465c-8725-daff17460331" />
+User
+<img width="1904" height="915" alt="image" src="https://github.com/user-attachments/assets/a7bc06aa-6cfb-4568-8a3a-6fdd31801b79" />
+
+Pengujian 2 — Gate manage-product Admin melihat menu Product di navigasi (dapat melihat tombol Delete,Edit,Detail untuk semua produk admin)
+<img width="1909" height="891" alt="Screenshot 2026-04-10 100625" src="https://github.com/user-attachments/assets/a0e27ecd-c5d3-4be9-91e3-630aca3bac72" />
+Tombol Edit & Delete hanya muncul untuk produk milik sendiri (user)
+<img width="1905" height="924" alt="image" src="https://github.com/user-attachments/assets/5563350b-9e1d-441e-a071-62b2d727f2ea" />
+
