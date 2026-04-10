@@ -41,10 +41,16 @@ Migrations
 3. Pembuatan Antarmuka (View / Blade)
 A. Halaman Utama (resources/views/product/index.blade.php)
 <img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/f3387c77-b7ab-4023-9094-d6ab89b2a24a" />
+<img width="1908" height="853" alt="image" src="https://github.com/user-attachments/assets/d1c8b529-c249-4981-b7fa-6a05f1df9e54" />
+
 B. Halaman Tambah Data (resources/views/product/create.blade.php)
 <img width="1920" height="1080" alt="Screenshot 2026-04-09 000505" src="https://github.com/user-attachments/assets/f0a40c3a-03b0-4142-b668-b0d5cb9219cf" />
+<img width="1903" height="923" alt="image" src="https://github.com/user-attachments/assets/5c43d942-fc4a-4563-91c9-8b89a81c8240" />
+
 C. Halaman Edit Data (resources/views/product/create.blade.php)
 <img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/1a95888d-e2d6-4df5-b8f0-4a80b76bd762" />
+<img width="1892" height="920" alt="image" src="https://github.com/user-attachments/assets/f48ba46b-2dd7-4d9e-971d-cb288203a898" />
+
 D. Halaman View Data (resources/views/product/view.blade.php)
 <img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/38b5f65e-b970-4451-8760-9f11aea1af81" />
 
