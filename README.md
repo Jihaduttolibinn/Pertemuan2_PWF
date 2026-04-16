@@ -67,3 +67,19 @@ Pengujian 2 — Gate manage-product Admin melihat menu Product di navigasi (dapa
 Tombol Edit & Delete hanya muncul untuk produk milik sendiri (user)
 <img width="1905" height="924" alt="image" src="https://github.com/user-attachments/assets/5563350b-9e1d-441e-a071-62b2d727f2ea" />
 
+**TUGAS PERTEMUAN 6**
+Test Validasi
+
+Test Store (Add Product)
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/1f8854f5-b3c0-4f66-8afd-b6007f30505a" />
+
+Isi nama dengan 1 huruf saja
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/a0182d44-7011-4065-9b9a-4a7486b467a4" />
+
+Isi harga dengan angka negatif
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/ae0c529b-c102-4e4b-b310-5799b1afc2bb" />
+
+Test Update (Edit Product)
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/6874c624-067e-40da-a0d7-d7b9173ea365" />
+<img width="1038" height="671" alt="image" src="https://github.com/user-attachments/assets/f13a60ad-a29f-4d52-a276-6be7969cb698" />
+
