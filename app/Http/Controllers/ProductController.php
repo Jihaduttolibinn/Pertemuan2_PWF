@@ -14,7 +14,17 @@ class ProductController extends Controller
      */
     public function index()
     {
-        $products = Product::where('user_id', Auth::id())->get();
+        if (Auth::user()->role === 'admin') {
+            $products = Product::with('user')->get();
+        } else {
+            $products = Product::where('user_id', Auth::id())
+                ->orWhereHas('user', function ($query) {
+                    $query->where('role', 'admin');
+                })
+                ->with('user')
+                ->get();
+        }
+        
         return view('product.index', compact('products'));
     }
 
@@ -23,6 +33,7 @@ class ProductController extends Controller
      */
     public function create()
     {
+        \Illuminate\Support\Facades\Gate::authorize('manage-product');
         $users = User::all();
         return view('product.create', compact('users'));
     }
@@ -32,11 +43,20 @@ class ProductController extends Controller
      */
     public function store(Request $request)
     {
+        \Illuminate\Support\Facades\Gate::authorize('manage-product');
         $request->validate([
-            'name' => 'required|string|max:255',
+            'name' => 'required|string|min:5|max:255',
             'qty' => 'required|integer|min:0',
             'price' => 'required|numeric|min:0',
             'user_id' => 'required|exists:users,id',
+        ], [
+            'name.required' => 'Nama produk wajib diisi.',
+            'name.min' => 'Nama produk minimal harus 5 karakter.',
+            'qty.required' => 'Jumlah (QTY) wajib diisi.',
+            'qty.integer' => 'Jumlah harus berupa angka bulat.',
+            'price.required' => 'Harga wajib diisi.',
+            'price.numeric' => 'Harga harus berupa angka.',
+            'user_id.required' => 'Pemilik produk wajib dipilih.',
         ]);
 
         Product::create([
@@ -62,6 +82,7 @@ class ProductController extends Controller
      */
     public function edit(Product $product)
     {
+        \Illuminate\Support\Facades\Gate::authorize('update', $product);
         $users = User::all();
         return view('product.edit', compact('product', 'users'));
     }
@@ -71,11 +92,20 @@ class ProductController extends Controller
      */
     public function update(Request $request, Product $product)
     {
+        \Illuminate\Support\Facades\Gate::authorize('update', $product);
         $request->validate([
-            'name' => 'required|string|max:255',
+            'name' => 'required|string|min:5|max:255',
             'qty' => 'required|integer|min:0',
             'price' => 'required|numeric|min:0',
             'user_id' => 'required|exists:users,id',
+        ], [
+            'name.required' => 'Nama produk wajib diisi.',
+            'name.min' => 'Nama produk minimal harus 5 karakter.',
+            'qty.required' => 'Jumlah (QTY) wajib diisi.',
+            'qty.integer' => 'Jumlah harus berupa angka bulat.',
+            'price.required' => 'Harga wajib diisi.',
+            'price.numeric' => 'Harga harus berupa angka.',
+            'user_id.required' => 'Pemilik produk wajib dipilih.',
         ]);
 
         $product->update([
@@ -93,6 +123,7 @@ class ProductController extends Controller
      */
     public function destroy(Product $product)
     {
+        \Illuminate\Support\Facades\Gate::authorize('delete', $product);
         $product->delete();
 
         return redirect()->route('product.index')->with('success', 'Produk berhasil dihapus.');
