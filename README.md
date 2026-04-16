@@ -33,3 +33,53 @@ Migrations
 <img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/805929bd-e372-4099-918c-df379739d192" />
 
 
+**TUGAS PERTEMUAN 4**
+1. Implementasi Logika & Validasi (Controller) Buka app/Http/Controllers/ProductController.php:
+<img width="1920" height="1080" alt="Screenshot 2026-03-14 224321" src="https://github.com/user-attachments/assets/db693f3c-f3ba-4b73-9551-32c3e222c19e" />
+2. Routing
+<img width="1920" height="1080" alt="Screenshot 2026-03-14 225728" src="https://github.com/user-attachments/assets/e1609e11-083b-45c2-b8e7-dc6b275e1a60" />
+3. Pembuatan Antarmuka (View / Blade)
+A. Halaman Utama (resources/views/product/index.blade.php)
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/f3387c77-b7ab-4023-9094-d6ab89b2a24a" />
+<img width="1908" height="853" alt="image" src="https://github.com/user-attachments/assets/d1c8b529-c249-4981-b7fa-6a05f1df9e54" />
+
+B. Halaman Tambah Data (resources/views/product/create.blade.php)
+<img width="1920" height="1080" alt="Screenshot 2026-04-09 000505" src="https://github.com/user-attachments/assets/f0a40c3a-03b0-4142-b668-b0d5cb9219cf" />
+<img width="1903" height="923" alt="image" src="https://github.com/user-attachments/assets/5c43d942-fc4a-4563-91c9-8b89a81c8240" />
+
+C. Halaman Edit Data (resources/views/product/create.blade.php)
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/1a95888d-e2d6-4df5-b8f0-4a80b76bd762" />
+<img width="1892" height="920" alt="image" src="https://github.com/user-attachments/assets/f48ba46b-2dd7-4d9e-971d-cb288203a898" />
+
+D. Halaman View Data (resources/views/product/view.blade.php)
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/38b5f65e-b970-4451-8760-9f11aea1af81" />
+
+
+**TUGAS PERTEMUAN 5**
+Pengujian 1 — Persiapan Role untuk mengetahaui role
+Admin
+<img width="1920" height="1080" alt="Screenshot 2026-04-10 100557" src="https://github.com/user-attachments/assets/18b8c0af-635b-465c-8725-daff17460331" />
+User
+<img width="1904" height="915" alt="image" src="https://github.com/user-attachments/assets/a7bc06aa-6cfb-4568-8a3a-6fdd31801b79" />
+
+Pengujian 2 — Gate manage-product Admin melihat menu Product di navigasi (dapat melihat tombol Delete,Edit,Detail untuk semua produk admin)
+<img width="1909" height="891" alt="Screenshot 2026-04-10 100625" src="https://github.com/user-attachments/assets/a0e27ecd-c5d3-4be9-91e3-630aca3bac72" />
+Tombol Edit & Delete hanya muncul untuk produk milik sendiri (user)
+<img width="1905" height="924" alt="image" src="https://github.com/user-attachments/assets/5563350b-9e1d-441e-a071-62b2d727f2ea" />
+
+**TUGAS PERTEMUAN 6**
+Test Validasi
+
+Test Store (Add Product)
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/1f8854f5-b3c0-4f66-8afd-b6007f30505a" />
+
+Isi nama dengan 1 huruf saja
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/a0182d44-7011-4065-9b9a-4a7486b467a4" />
+
+Isi harga dengan angka negatif
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/ae0c529b-c102-4e4b-b310-5799b1afc2bb" />
+
+Test Update (Edit Product)
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/6874c624-067e-40da-a0d7-d7b9173ea365" />
+<img width="1038" height="671" alt="image" src="https://github.com/user-attachments/assets/f13a60ad-a29f-4d52-a276-6be7969cb698" />
+
