@@ -83,3 +83,7 @@ Test Update (Edit Product)
 <img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/6874c624-067e-40da-a0d7-d7b9173ea365" />
 <img width="1038" height="671" alt="image" src="https://github.com/user-attachments/assets/f13a60ad-a29f-4d52-a276-6be7969cb698" />
 
+
+**TUGAS PERTEMUAN 7**
+<img width="1827" height="558" alt="image" src="https://github.com/user-attachments/assets/cf40827d-4716-43ab-81cc-641a2d9044f5" />
+
