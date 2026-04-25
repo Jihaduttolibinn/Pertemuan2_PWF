@@ -1,8 +1,8 @@
 # Laporan Progress Project - UCP 1
 
-**Nama :**
-**NIM :**
-**Kelas :**
+**Nama :* Jihadut Tolibin*
+**NIM :*20230140125*
+**Kelas :*TI C*
 
 ## 1. Daftar Kategori (Category List)
 Halaman ini menampilkan seluruh kategori produk yang telah terdaftar dalam sistem. Terdapat kolom untuk nama kategori, jumlah produk yang terkait, serta aksi untuk mengedit atau menghapus kategori.
