@@ -34,8 +34,9 @@ class ProductController extends Controller
     public function create()
     {
         \Illuminate\Support\Facades\Gate::authorize('manage-product');
-        $users = User::all();
-        return view('product.create', compact('users'));
+        $users = \App\Models\User::all();
+        $categories = \App\Models\Category::all();
+        return view('product.create', compact('users', 'categories'));
     }
 
     /**
@@ -46,14 +47,14 @@ class ProductController extends Controller
         \Illuminate\Support\Facades\Gate::authorize('manage-product');
         $request->validate([
             'name' => 'required|string|min:5|max:255',
-            'qty' => 'required|integer|min:0',
+            'quantity' => 'required|string|min:0',
             'price' => 'required|numeric|min:0',
             'user_id' => 'required|exists:users,id',
+            'category_id' => 'nullable|exists:category,id',
         ], [
             'name.required' => 'Nama produk wajib diisi.',
             'name.min' => 'Nama produk minimal harus 5 karakter.',
-            'qty.required' => 'Jumlah (QTY) wajib diisi.',
-            'qty.integer' => 'Jumlah harus berupa angka bulat.',
+            'quantity.required' => 'Jumlah (QTY) wajib diisi.',
             'price.required' => 'Harga wajib diisi.',
             'price.numeric' => 'Harga harus berupa angka.',
             'user_id.required' => 'Pemilik produk wajib dipilih.',
@@ -61,8 +62,9 @@ class ProductController extends Controller
 
         Product::create([
             'user_id' => $request->user_id,
+            'category_id' => $request->category_id,
             'name' => $request->name,
-            'qty' => $request->qty,
+            'quantity' => $request->quantity,
             'price' => $request->price,
         ]);
 
@@ -83,8 +85,9 @@ class ProductController extends Controller
     public function edit(Product $product)
     {
         \Illuminate\Support\Facades\Gate::authorize('update', $product);
-        $users = User::all();
-        return view('product.edit', compact('product', 'users'));
+        $users = \App\Models\User::all();
+        $categories = \App\Models\Category::all();
+        return view('product.edit', compact('product', 'users', 'categories'));
     }
 
     /**
@@ -95,14 +98,14 @@ class ProductController extends Controller
         \Illuminate\Support\Facades\Gate::authorize('update', $product);
         $request->validate([
             'name' => 'required|string|min:5|max:255',
-            'qty' => 'required|integer|min:0',
+            'quantity' => 'required|string|min:0',
             'price' => 'required|numeric|min:0',
             'user_id' => 'required|exists:users,id',
+            'category_id' => 'nullable|exists:category,id',
         ], [
             'name.required' => 'Nama produk wajib diisi.',
             'name.min' => 'Nama produk minimal harus 5 karakter.',
-            'qty.required' => 'Jumlah (QTY) wajib diisi.',
-            'qty.integer' => 'Jumlah harus berupa angka bulat.',
+            'quantity.required' => 'Jumlah (QTY) wajib diisi.',
             'price.required' => 'Harga wajib diisi.',
             'price.numeric' => 'Harga harus berupa angka.',
             'user_id.required' => 'Pemilik produk wajib dipilih.',
@@ -110,8 +113,9 @@ class ProductController extends Controller
 
         $product->update([
             'user_id' => $request->user_id,
+            'category_id' => $request->category_id,
             'name' => $request->name,
-            'qty' => $request->qty,
+            'quantity' => $request->quantity,
             'price' => $request->price,
         ]);
 

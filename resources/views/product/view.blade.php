@@ -61,9 +61,17 @@
                             <div class="w-32 shrink-0 text-sm font-medium text-gray-500 dark:text-gray-400">Quantity</div>
                             <div>
                                 <span class="inline-flex items-center gap-1.5 px-2 py-0.5 rounded-full text-xs font-medium 
-                                    {{ $product->qty > 10 ? 'bg-green-100 text-green-800 dark:bg-green-900/30 dark:text-green-400' : 'bg-red-100 text-red-800 dark:bg-red-900/30 dark:text-red-400' }}">
-                                    {{ $product->qty }} - {{ $product->qty > 10 ? 'In Stock' : 'Low Stock' }}
+                                    {{ (int)$product->quantity > 10 ? 'bg-green-100 text-green-800 dark:bg-green-900/30 dark:text-green-400' : 'bg-red-100 text-red-800 dark:bg-red-900/30 dark:text-red-400' }}">
+                                    {{ $product->quantity }} - {{ (int)$product->quantity > 10 ? 'In Stock' : 'Low Stock' }}
                                 </span>
+                            </div>
+                        </div>
+
+                        {{-- Category --}}
+                        <div class="flex items-center px-5 py-4">
+                            <div class="w-32 shrink-0 text-sm font-medium text-gray-500 dark:text-gray-400">Category</div>
+                            <div class="text-sm font-semibold text-gray-800 dark:text-gray-100">
+                                {{ $product->category->name ?? 'No Category' }}
                             </div>
                         </div>
 

@@ -19,18 +19,18 @@
                             </p>
                         </div>
                     </div>
-
+ 
                     {{-- Form Delete (Hidden) --}}
                     <form id="delete-product-form" action="{{ route('product.destroy', $product->id) }}" method="POST">
                         @csrf
                         @method('DELETE')
                     </form>
-
+ 
                     {{-- Form Edit --}}
                     <form action="{{ route('product.update', $product->id) }}" method="POST" class="space-y-6">
                         @csrf
                         @method('PUT')
-
+ 
                         {{-- Name --}}
                         <div>
                             <label for="name" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">
@@ -43,17 +43,17 @@
                                 <p class="mt-1.5 text-xs text-red-500">{{ $message }}</p>
                             @enderror
                         </div>
-
+ 
                         {{-- Quantity & Price --}}
                         <div class="grid grid-cols-2 gap-4">
                             <div>
                                 <label for="quantity" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">
                                     Quantity <span class="text-red-500"></span>
                                 </label>
-                                <input type="number" id="quantity" name="qty" value="{{ old('qty', $product->qty) }}" 
-                                       placeholder="0" min="0"
-                                       class="w-full px-4 py-2.5 rounded-lg border text-sm bg-white dark:bg-gray-800 text-gray-900 dark:text-gray-100 placeholder-gray-400 dark:placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-transparent transition {{ $errors->has('qty') ? 'border-red-400 ring-1 ring-red-400' : 'border-gray-300 dark:border-gray-600' }}">
-                                @error('qty')
+                                <input type="text" id="quantity" name="quantity" value="{{ old('quantity', $product->quantity) }}" 
+                                       placeholder="0"
+                                       class="w-full px-4 py-2.5 rounded-lg border text-sm bg-white dark:bg-gray-800 text-gray-900 dark:text-gray-100 placeholder-gray-400 dark:placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-transparent transition {{ $errors->has('quantity') ? 'border-red-400 ring-1 ring-red-400' : 'border-gray-300 dark:border-gray-600' }}">
+                                @error('quantity')
                                     <p class="mt-1.5 text-xs text-red-500">{{ $message }}</p>
                                 @enderror
                             </div>
@@ -69,26 +69,45 @@
                                 @enderror
                             </div>
                         </div>
-
-                        {{-- Owner --}}
-                        <div>
-                            <label for="user_id" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">
-                                Owner <span class="text-red-500"></span>
-                            </label>
-                            <select id="user_id" name="user_id" 
-                                    class="w-full px-4 py-2.5 rounded-lg border text-sm bg-white dark:bg-gray-800 text-gray-900 dark:text-gray-100 placeholder-gray-400 dark:placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-transparent transition {{ $errors->has('user_id') ? 'border-red-400 ring-1 ring-red-400' : 'border-gray-300 dark:border-gray-600' }}">
-                                <option value="">-- Select Owner --</option>
-                                @foreach ($users as $user)
-                                    <option value="{{ $user->id }}" {{ (old('user_id', $product->user_id) == $user->id) ? 'selected' : '' }}>
-                                        {{ $user->name }}
-                                    </option>
-                                @endforeach
-                            </select>
-                            @error('user_id')
-                                <p class="mt-1.5 text-xs text-red-500">{{ $message }}</p>
-                            @enderror
+ 
+                        {{-- Category & User --}}
+                        <div class="grid grid-cols-2 gap-4">
+                            <div>
+                                <label for="category_id" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">
+                                    Category
+                                </label>
+                                <select id="category_id" name="category_id" 
+                                        class="w-full px-4 py-2.5 rounded-lg border text-sm bg-white dark:bg-gray-800 text-gray-900 dark:text-gray-100 placeholder-gray-400 dark:placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-transparent transition {{ $errors->has('category_id') ? 'border-red-400 ring-1 ring-red-400' : 'border-gray-300 dark:border-gray-600' }}">
+                                    <option value="">-- No Category --</option>
+                                    @foreach ($categories as $category)
+                                        <option value="{{ $category->id }}" {{ old('category_id', $product->category_id) == $category->id ? 'selected' : '' }}>
+                                            {{ $category->name }}
+                                        </option>
+                                    @endforeach
+                                </select>
+                                @error('category_id')
+                                    <p class="mt-1.5 text-xs text-red-500">{{ $message }}</p>
+                                @enderror
+                            </div>
+                            <div>
+                                <label for="user_id" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">
+                                    Owner
+                                </label>
+                                <select id="user_id" name="user_id" 
+                                        class="w-full px-4 py-2.5 rounded-lg border text-sm bg-white dark:bg-gray-800 text-gray-900 dark:text-gray-100 placeholder-gray-400 dark:placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-transparent transition {{ $errors->has('user_id') ? 'border-red-400 ring-1 ring-red-400' : 'border-gray-300 dark:border-gray-600' }}">
+                                    <option value="">-- Select Owner --</option>
+                                    @foreach ($users as $user)
+                                        <option value="{{ $user->id }}" {{ old('user_id', $product->user_id) == $user->id ? 'selected' : '' }}>
+                                            {{ $user->name }}
+                                        </option>
+                                    @endforeach
+                                </select>
+                                @error('user_id')
+                                    <p class="mt-1.5 text-xs text-red-500">{{ $message }}</p>
+                                @enderror
+                            </div>
                         </div>
-
+ 
                         {{-- Actions --}}
                         <div class="flex items-center justify-between pt-4 border-t border-gray-100 dark:border-gray-700 mt-8">
                             <button type="button" 
@@ -99,7 +118,7 @@
                                 </svg>
                                 Delete Product
                             </button>
-
+ 
                             <div class="flex items-center gap-3">
                                 <a href="{{ route('product.index') }}" 
                                    class="px-4 py-2 text-sm font-medium text-gray-700 dark:text-gray-300 hover:text-gray-900 dark:hover:text-gray-100 transition">
