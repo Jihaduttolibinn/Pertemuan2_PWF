@@ -95,6 +95,36 @@ Auth
 <img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/4d65a4e6-aefb-4932-b554-c26967eb685d" />
 
 **Category**
-Category index
+Category GET
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/3c7549e0-2e7f-48c5-bd39-7a4b1830ff40" />
+
+Category POST
+<img width="1920" height="1080" alt="Screenshot 2026-05-07 221918" src="https://github.com/user-attachments/assets/108d8a42-9894-4cc8-9c25-e7b6ce0e4686" />
+
+Category GET ID
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/e7a46ba7-cbce-4afd-8832-513c0c8c0666" />
+
+Category Update
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/43874c30-4c97-4bda-8494-b9f899077b1f" />
+
+Category Delete
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/114a9b11-aea1-4689-85f4-27089783361a" />
+
+**Product**
+
+Product GET
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/ac78dc3b-0940-47d3-b360-913abb03f4ca" />
+
+Product POST
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/7e472815-45ab-4954-ab6c-0cf83886ec27" />
+
+Product GET ID
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/17a52287-9cc9-4ec3-a559-6c81e7f5a2ef" />
+
+Product Update
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/8413ebf7-8f44-4fe8-ae5c-35ce9d39f3ac" />
+
+product Delete
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/18d29702-5da5-4290-9408-7dce9a622756" />
 
 
