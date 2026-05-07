@@ -87,3 +87,14 @@ Test Update (Edit Product)
 **TUGAS PERTEMUAN 7**
 <img width="1827" height="558" alt="image" src="https://github.com/user-attachments/assets/cf40827d-4716-43ab-81cc-641a2d9044f5" />
 
+**TUGAS PERTEMUAN 9**
+User
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/5ca638b0-7587-4f19-b303-1ed438e19a73" />
+
+Auth
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/4d65a4e6-aefb-4932-b554-c26967eb685d" />
+
+**Category**
+Category index
+
+
